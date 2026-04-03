@@ -1,8 +1,8 @@
 package steam
 
 import (
-	"github.com/Philipp15b/go-steam/v3/protocol/steamlang"
-	"github.com/Philipp15b/go-steam/v3/steamid"
+	"github.com/MeidoCompany/go-steam/v3/protocol/steamlang"
+	"github.com/MeidoCompany/go-steam/v3/steamid"
 )
 
 type LoggedOnEvent struct {

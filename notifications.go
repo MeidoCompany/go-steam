@@ -1,9 +1,9 @@
 package steam
 
 import (
-	"github.com/Philipp15b/go-steam/v3/protocol"
-	"github.com/Philipp15b/go-steam/v3/protocol/protobuf"
-	"github.com/Philipp15b/go-steam/v3/protocol/steamlang"
+	"github.com/MeidoCompany/go-steam/v3/protocol"
+	"github.com/MeidoCompany/go-steam/v3/protocol/protobuf"
+	"github.com/MeidoCompany/go-steam/v3/protocol/steamlang"
 )
 
 type Notifications struct {
