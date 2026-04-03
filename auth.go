@@ -119,7 +119,9 @@ func (a *Auth) handleLogOnResponse(packet *protocol.Packet) {
 		atomic.StoreInt32(&a.client.sessionId, msg.Header.Proto.GetClientSessionid())
 		atomic.StoreUint64(&a.client.steamId, msg.Header.Proto.GetSteamid())
 
-		go a.client.heartbeatLoop(time.Duration(body.GetHeartbeatSeconds()))
+		if heartbeat := body.GetHeartbeatSeconds(); heartbeat > 0 {
+			go a.client.heartbeatLoop(time.Duration(heartbeat))
+		}
 
 		a.client.Emit(&LoggedOnEvent{
 			Result:                    steamlang.EResult(body.GetEresult()),
